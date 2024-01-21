@@ -650,6 +650,25 @@ files = [
 ]
 
 [[package]]
+name = "importlib-metadata"
+version = "7.0.1"
+description = "Read metadata from Python packages"
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "importlib_metadata-7.0.1-py3-none-any.whl", hash = "sha256:4805911c3a4ec7c3966410053e9ec6a1fecd629117df5adee56dfc9432a1081e"},
+    {file = "importlib_metadata-7.0.1.tar.gz", hash = "sha256:f238736bb06590ae52ac1fab06a3a9ef1d8dce2b7a35b5ab329371d6c8f5d2cc"},
+]
+
+[package.dependencies]
+zipp = ">=0.5"
+
+[package.extras]
+docs = ["furo", "jaraco.packaging (>=9.3)", "jaraco.tidelift (>=1.4)", "rst.linker (>=1.9)", "sphinx (<7.2.5)", "sphinx (>=3.5)", "sphinx-lint"]
+perf = ["ipython"]
+testing = ["flufl.flake8", "importlib-resources (>=1.3)", "packaging", "pyfakefs", "pytest (>=6)", "pytest-black (>=0.3.7)", "pytest-checkdocs (>=2.4)", "pytest-cov", "pytest-enabler (>=2.2)", "pytest-mypy (>=0.9.1)", "pytest-perf (>=0.9.2)", "pytest-ruff"]
+
+[[package]]
 name = "importlib-resources"
 version = "5.4.0"
 description = "Read resources from Python packages"
@@ -1007,22 +1026,25 @@ test = ["coverage", "ipykernel", "pytest (>=6.0)", "pytest-console-scripts", "py
 
 [[package]]
 name = "jupyter-server-proxy"
-version = "3.2.0"
-description = "Jupyter server extension to supervise and proxy web services"
+version = "4.1.0"
+description = "A JupyterLab extension accompanying the PyPI package jupyter-server-proxy adding launcher items for configured server processes."
 optional = false
-python-versions = ">=3.6"
+python-versions = ">=3.8"
 files = [
-    {file = "jupyter-server-proxy-3.2.0.tar.gz", hash = "sha256:816262f5711432dd79cbbd81e427cc2b592f522b0fae54368ed6e9d943384327"},
-    {file = "jupyter_server_proxy-3.2.0-py3-none-any.whl", hash = "sha256:483333030546789af73823a808613f37980991fda162e0c9cc55065327c140fe"},
+    {file = "jupyter_server_proxy-4.1.0-py3-none-any.whl", hash = "sha256:3a417d6996e47a90ba5ec5dd2603887cfd2efbc4abf850a1a0fbe77e3b4d04e9"},
+    {file = "jupyter_server_proxy-4.1.0.tar.gz", hash = "sha256:2cfac3b4232fe7144e8e60296b4f861708b4f13b29260a2cf28976bf8e617f70"},
 ]
 
 [package.dependencies]
 aiohttp = "*"
+importlib-metadata = {version = ">=4.8.3", markers = "python_version < \"3.10\""}
 jupyter-server = ">=1.0"
-simpervisor = ">=0.4"
+simpervisor = ">=1.0"
 
 [package.extras]
-acceptance = ["robotframework-jupyterlibrary"]
+acceptance = ["jupyter-server-proxy[test]", "robotframework-jupyterlibrary (>=0.4.2)"]
+classic = ["jupyter-server (<2)", "jupyterlab (>=3.0.0,<4.0.0a0)", "notebook (<7.0.0a0)"]
+lab = ["jupyter-server (>=2)", "jupyterlab (>=4.0.5,<5.0.0a0)", "nbclassic", "notebook (>=7)"]
 test = ["pytest", "pytest-cov", "pytest-html"]
 
 [[package]]
@@ -2463,14 +2485,17 @@ testing-integration = ["build[virtualenv] (>=1.0.3)", "filelock (>=3.4.0)", "jar
 
 [[package]]
 name = "simpervisor"
-version = "0.4"
+version = "1.0.0"
 description = "Simple async process supervisor"
 optional = false
-python-versions = "*"
+python-versions = ">=3.8"
 files = [
-    {file = "simpervisor-0.4-py3-none-any.whl", hash = "sha256:8af72599d089efcfff30a86266de44b874b689611baa1345213795624fbd74fa"},
-    {file = "simpervisor-0.4.tar.gz", hash = "sha256:cec79e13cdbd6edb04a5c98c1ff8d4bd9713e706c069226909a1ef0e89d393c5"},
+    {file = "simpervisor-1.0.0-py3-none-any.whl", hash = "sha256:3e313318264559beea3f475ead202bc1cd58a2f1288363abb5657d306c5b8388"},
+    {file = "simpervisor-1.0.0.tar.gz", hash = "sha256:7eb87ca86d5e276976f5bb0290975a05d452c6a7b7f58062daea7d8369c823c1"},
 ]
+
+[package.extras]
+test = ["aiohttp", "psutil", "pytest", "pytest-asyncio", "pytest-cov"]
 
 [[package]]
 name = "six"
@@ -2831,4 +2856,4 @@ testing = ["func-timeout", "jaraco.itertools", "pytest (>=4.6)", "pytest-black (
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.8,<3.11"
-content-hash = "a06664819583cbf8bc30036d59a5d4250d7f44f7cdef8a088d6e6bb774480c4f"
+content-hash = "b61619af40007ada32d72d34d1ab80fe3a7e53b5d4e7450e4383686b08b68330"
