@@ -7,7 +7,7 @@ all: build
 build:
 	-rm -f Manifest.toml docs/Manifest.toml 
 	-rm -rf .venv .venv.zip
-	docker build -t ${DOCKER_IMAGE} .
+	docker build -t ${DOCKER_IMAGE} . --build-arg NB_UID=`id -u`
 	docker-compose build
 	docker run --name ${DOCKER_IMAGE}-tmp ${DOCKER_IMAGE}
 	docker cp ${DOCKER_IMAGE}-tmp:/workspace/jldev_poetry/.venv.zip .venv.zip
@@ -25,7 +25,7 @@ web: docs
 
 test: jltest mypy pytest
 
-jltest:
+jltest: build
 	docker-compose run --rm shell julia -e 'using Pkg; Pkg.activate("."); Pkg.test()'
 mypy:
 	docker-compose run --rm shell poe mypy
