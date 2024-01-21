@@ -8,14 +8,14 @@ description = "Enhance your JOps (= Julia + Python/Poetry + VSCode + JupyterLab 
 authors = ["SatoshiTerasaki <terasakisatoshi.math@gmail.com>"]
 
 [tool.poetry.dependencies]
-python = ">=3.8,<3.11"
+python = ">=3.9,<3.12"
 matplotlib = "^3.5.0"
 numpy = "^1.22.0"
 sympy = "^1.9"
 pandas = "^1.3.4"
 scipy = "^1.10.0"
 
-[tool.poetry.dev-dependencies]
+[tool.poetry.group.dev.dependencies]
 black = "^21.12b0"
 ipykernel = "^6.6.0"
 ipywidgets = "^7.6.5"
@@ -36,6 +36,7 @@ jupyterlab-system-monitor = "^0.8.0"
 jupyter-server-proxy = "^4.1.0"
 tokenize-rt = "^4.2.1"
 ipython = "^8.12.3"
+jupyterlab-sublime = "^0.4.1"
 
 [tool.poe.tasks]
 test = "pytest"
