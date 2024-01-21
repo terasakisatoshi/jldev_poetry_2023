@@ -9,7 +9,7 @@ Reference: https://qiita.com/homoluctus/items/dca21cf6b2eff858672b
         "editor.formatOnType": false,
         "editor.insertSpaces": true,
         "editor.codeActionsOnSave": {
-            "source.organizeImports": true
+            "source.organizeImports": "explicit"
         },
     },
     "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
