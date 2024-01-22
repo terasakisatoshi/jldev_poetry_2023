@@ -34,7 +34,7 @@ jupyterlab-topbar = "^0.6.1"
 jupyterlab-topbar-text = "^0.6.2"
 jupyterlab-system-monitor = "^0.8.0"
 jupyter-server-proxy = "^4.1.0"
-tokenize-rt = "^4.2.1"
+tokenize-rt = "^5.2.0"
 ipython = "^8.12.3"
 jupyterlab-sublime = "^0.4.1"
 
