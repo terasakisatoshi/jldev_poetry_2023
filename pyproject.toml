@@ -23,7 +23,7 @@ isort = "^5.10.1"
 jupyter = "^1.0.0"
 jupyterlab = "^3.2.5"
 jupyter-pluto-proxy = {git = "https://github.com/IllumiDesk/jupyter-pluto-proxy.git", rev = "main"}
-jupyterlab-code-formatter = "^1.4.10"
+jupyterlab-code-formatter = "^2.2.1"
 jupytext = "^1.13.3"
 mypy = "^1.8"
 nbconvert = "^6.5.1"
