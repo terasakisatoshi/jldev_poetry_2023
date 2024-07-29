@@ -9,7 +9,7 @@ authors = ["SatoshiTerasaki <terasakisatoshi.math@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = ">=3.9,<3.12"
-matplotlib = "^3.5.0"
+matplotlib = "^3.9.1"
 numpy = "^1.26.4"
 sympy = "^1.9"
 pandas = "^2.2.0"
