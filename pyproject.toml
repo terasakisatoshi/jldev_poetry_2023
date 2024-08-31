@@ -24,7 +24,7 @@ jupyter = "^1.0.0"
 jupyterlab = "^3.2.5"
 jupyter-pluto-proxy = {git = "https://github.com/IllumiDesk/jupyter-pluto-proxy.git", rev = "main"}
 jupyterlab-code-formatter = "^2.2.1"
-jupytext = "^1.13.3"
+jupytext = "^1.16.4"
 mypy = "^1.8"
 nbconvert = "^7.16.0"
 poethepoet = "^0.26.1"
