@@ -21,7 +21,7 @@ ipykernel = "^6.29.2"
 ipywidgets = "^8.1.2"
 isort = "^5.10.1"
 jupyter = "^1.0.0"
-jupyterlab = "^3.2.5"
+jupyterlab = "^3.6.8"
 jupyter-pluto-proxy = {git = "https://github.com/IllumiDesk/jupyter-pluto-proxy.git", rev = "main"}
 jupyterlab-code-formatter = "^2.2.1"
 jupytext = "^1.13.3"
