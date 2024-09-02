@@ -20,7 +20,7 @@ black = "^24.3"
 ipykernel = "^6.29.2"
 ipywidgets = "^8.1.2"
 isort = "^5.10.1"
-jupyter = "^1.0.0"
+jupyter = "^1.1.1"
 jupyterlab = "^3.2.5"
 jupyter-pluto-proxy = {git = "https://github.com/IllumiDesk/jupyter-pluto-proxy.git", rev = "main"}
 jupyterlab-code-formatter = "^2.2.1"
