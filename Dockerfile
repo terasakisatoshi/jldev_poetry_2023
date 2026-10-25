@@ -1,4 +1,4 @@
-FROM julia:1.10.0
+FROM julia:1.10.0-bookworm
 
 # create user with a home directory
 ARG NB_USER=jovyan
@@ -27,6 +27,9 @@ RUN apt-get update && \
     zip \
     && \
     apt-get clean && rm -rf /var/cache/apt/archives/* /var/lib/apt/lists/* # clean up
+
+# Pillow 13 requires Python 3.11; keep the image aligned with pyproject.toml.
+RUN python3 -c 'import sys; assert (3, 11) <= sys.version_info[:2] < (3, 12), sys.version'
 
 # Dependencies for development
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
@@ -115,3 +118,4 @@ EXPOSE 1234
 RUN echo "source /usr/share/bash-completion/completions/git" >> ~/.bashrc
 
 CMD ["julia"]
+
