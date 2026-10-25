@@ -8,7 +8,8 @@ description = "Enhance your JOps (= Julia + Python/Poetry + VSCode + JupyterLab 
 authors = ["SatoshiTerasaki <terasakisatoshi.math@gmail.com>"]
 
 [tool.poetry.dependencies]
-python = ">=3.9,<3.12"
+python = ">=3.11,<3.12"
+Pillow = ">=13.0.0,<14.0.0"
 matplotlib = "^3.9.2"
 numpy = "^1.26.4"
 sympy = "^1.9"
@@ -64,3 +65,4 @@ exclude = '''
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
+
