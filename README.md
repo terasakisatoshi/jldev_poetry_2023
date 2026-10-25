@@ -4,6 +4,10 @@ Enhance your JOps (= Julia + Python/Poetry + VSCode + JupyterLab + Docker + Plut
 
 # How to use
 
+## Supported Julia versions
+
+CI tests Julia 1.10 and the latest stable Julia 1.x release (`1`). Julia 1.6 is no longer supported; nightly builds are outside the supported CI matrix.
+
 ## Prerequisite
 
 - Please install Git, GNU Make, Docker and Docker Compose.
