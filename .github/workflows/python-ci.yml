@@ -32,3 +32,12 @@ jobs:
           poetry run pytest -q
           poetry run black --check src test
           poetry run mypy src
+      - uses: julia-actions/setup-julia@v2
+        with:
+          version: '1.10'
+      - name: Install Julia notebook kernel
+        run: |
+          export JUPYTER="$(poetry env info --path)/bin/jupyter"
+          julia -e 'using Pkg; Pkg.add("IJulia"); using IJulia; IJulia.installkernel("Julia", "--project=@v1.10")'
+      - name: Real kernels, notebook export and Lab startup
+        run: poetry run python ci/notebook_smoke.py
