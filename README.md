@@ -89,3 +89,11 @@ Then dive into Remote Container.
 ```console
 $ make clean
 ```
+
+## JupyterLab 4 migration
+
+The notebook environment now uses JupyterLab 4 and Notebook 7. Python and Julia (IJulia) kernels remain supported. The formatter and topbar text extensions are updated for Lab 4.
+
+The incompatible legacy topbar container, system monitor, Sublime keybindings, and WebIO frontend extensions are removed. WebIO-specific interactive displays will need a Lab 4-compatible replacement; ordinary Julia notebooks are unaffected by that frontend removal. Pluto proxy remains installed.
+
+CI exercises real Python and Julia notebook kernels, HTML export, scientific plotting, and authenticated Lab startup. Browser interaction with every extension and a complete Docker build are not covered by this smoke test.
